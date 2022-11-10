@@ -19,6 +19,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->text('address');
+            $table->string('creditcard_type');
+            $table->string('creditcard_number');
+            $table->string('creditcard_name');
+            $table->string('creditcard_expired');
+            $table->string('creditcard_cvv');
             $table->rememberToken();
             $table->timestamps();
         });
