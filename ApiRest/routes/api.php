@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+Route::group(['prefix' => 'user'], function () {
+    Route::post('register', [UserController::class, 'store']);
+    Route::get('list', [UserController::class, 'index']);
+    Route::get('{id}', [UserController::class, 'show']);
+    Route::patch('', [UserController::class, 'update']);
 });

@@ -29,8 +29,7 @@ class BaseController extends Controller
     public function sendError($error, $errorMessages = [], $code = 500)
     {
         $response = [
-            'success' => false,
-            'message' => $error,
+            'error' => $error,
         ];
         if (!empty($errorMessages)) {
             $response['data'] = (is_null($errorMessages))?"Something went wrong. Please try again later.":$errorMessages;
