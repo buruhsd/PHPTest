@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "18a76044-0c9d-4c4d-a905-c65a7a1a0a1c",
+		"name": "logique test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "qeww",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "Jepara",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "buruhsd@outloio.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_type",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_number",
+							"value": "27653465435687653",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_name",
+							"value": "erreg",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "creditcard_expired",
+							"value": "34/23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_cvv",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "photos[0][file]",
+							"type": "file",
+							"src": "/home/buruhsd/Pictures/Screenshots/Screenshot from 2022-11-09 14-24-41.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get list user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Muhammad",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "Jepara",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "aljawad.jpr@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_type",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_number",
+							"value": "27653465435687653",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_name",
+							"value": "erreg",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_expired",
+							"value": "34/23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_cvv",
+							"value": "23",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/list?lt=10&of=0&ob=name&sb=desc&q=",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"list"
+					],
+					"query": [
+						{
+							"key": "lt",
+							"value": "10"
+						},
+						{
+							"key": "of",
+							"value": "0"
+						},
+						{
+							"key": "ob",
+							"value": "name"
+						},
+						{
+							"key": "sb",
+							"value": "desc"
+						},
+						{
+							"key": "q",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Muhammad",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "Jepara",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "aljawad.jpr@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_type",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_number",
+							"value": "27653465435687653",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_name",
+							"value": "erreg",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_expired",
+							"value": "34/23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_cvv",
+							"value": "23",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Muhammad",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "Jepara",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "aljawad.jp1r1@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_type",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_number",
+							"value": "27653465435687653",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_name",
+							"value": "erreg",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_expired",
+							"value": "34/23",
+							"type": "default"
+						},
+						{
+							"key": "creditcard_cvv",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "user_id",
+							"value": "5",
+							"type": "default"
+						},
+						{
+							"key": "photos[0][file]",
+							"type": "file",
+							"src": "/home/buruhsd/Pictures/Screenshots/Screenshot from 2022-11-07 17-21-05.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/user?_method=PATCH",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "PATCH"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
