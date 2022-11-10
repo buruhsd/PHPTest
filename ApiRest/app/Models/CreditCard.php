@@ -16,4 +16,6 @@ class CreditCard extends Model
         'creditcard_expired',
         'creditcard_cvv',
     ];
+
+    protected $hidden = ['updated_at', 'created_at'];
 }

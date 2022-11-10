@@ -11,4 +11,6 @@ class Photo extends Model
     protected $fillable = [
         'url'
     ];
+
+    protected $hidden = ['updated_at', 'created_at'];
 }

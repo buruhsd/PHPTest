@@ -33,12 +33,6 @@ class UserController extends Controller
         return response()->json($data);
     }
 
-    // if (!function_exists('sessionProperty')) {
-    //     function sessionProperty()
-    //     {
-    //         return Request::header("Property-Selected") ? Auth::user()->property()->find(Request::header("Property-Selected")) : null;
-    //     }
-    //   }
     /**
      * Store a newly created resource in storage.
      *
@@ -147,6 +141,18 @@ class UserController extends Controller
         $user = User::findOrFail($request->user_id);
         $user->update($input);
         $user->creditcard()->first()->update($input);
+
+        if(isset($request->photos) && count($request->photos) > 0){
+            $user->photos()->delete();
+
+            foreach($request->photos as $photos){
+                $image = storeImages('public/images/photos/'.$user->id.'/', $photos['file']);
+                $urlImage = Storage::url('public/images/photos/'.$user->id.'/'. $image);
+                $user->photos()->create([
+                    'url' => $urlImage
+                ]);
+            }
+        }
 
         return response()->json(['user_id' => $user->id]);
     }
